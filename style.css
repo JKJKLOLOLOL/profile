@@ -6,7 +6,6 @@ body {
   font-family: 'Bebas Neue', sans-serif;
 }
 
-
 h1 {
   color: red;
   font-family: 'Bebas Neue', sans-serif;
@@ -22,16 +21,13 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
   font-size: 14px;
-
 }
 
 a {
   text-decoration: none;
-
 }
 
 strong a {
-
   color: black;
 }
 
@@ -43,29 +39,43 @@ strong a {
   text-align: center;
 }
 
+.tel:hover{
+  color:red;
+}
+
+.email:hover{
+  color:red;
+}
+
 .container{
   display: block;
-  width: 70vw;
+  width: 80vw;
   background-color: #fff;
   border-radius: 10px;
   padding: 30px 10px;
 
   .img-circle {
     border-radius: 50%;
-    /* margin: 3rem auto; */
     height: 20vh;
+    animation: glowing-animation 2s infinite;
+    border: 2px solid #ff0000;
   };
-
 }
 
-
-/* .section {
-  text-align: center;
-  margin-bottom: 2rem;
-} */
-
+@keyframes glowing-animation {
+  0% {
+    box-shadow: 0 0 6px #ff0000;
+  }
+  50% {
+    box-shadow: 0 0 25px #ff0000;
+  }
+  100% {
+    box-shadow: 0 0 6px #ff0000;
+  }
+}
 
 .workbtn {
+  display: block;
   background-color: white;
   border-color: rgb(203, 203, 203);
   border-style: solid;
@@ -73,32 +83,19 @@ strong a {
   width: 60%;
   margin-top: 10px;
   padding: 16px;
-  color: red;
   font-size: 18px;
-
-  a{
-    text-decoration: none;
-    color: red;
-  }
+  color:red;
 }
 
 .workbtn:hover {
   background-color: red;
-  border-color: rgb(203, 203, 203);
-  border-style: solid;
   border-radius: 5px;
   width: 60%;
   margin-top: 10px;
   padding: 16px;
   color: white;
   font-size: 18px;
-
-  a{
-    text-decoration: none;
-    color: red;
-  }
 }
-
 
 .footer {
   margin-top: 4vh;
