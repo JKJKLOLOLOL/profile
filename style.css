@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+.text{
+  width:75%;
+}
+
 body {
   background-color: whitesmoke;
   color: black;
   font-family: 'Bebas Neue', sans-serif;
 }
-
 
 h1 {
   color: red;
@@ -22,16 +25,13 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
   font-size: 14px;
-
 }
 
 a {
   text-decoration: none;
-
 }
 
 strong a {
-
   color: black;
 }
 
@@ -43,6 +43,14 @@ strong a {
   text-align: center;
 }
 
+.tel:hover{
+  color:red;
+}
+
+.email:hover{
+  color:red;
+}
+
 .container{
   display: block;
   width: 70vw;
@@ -52,20 +60,26 @@ strong a {
 
   .img-circle {
     border-radius: 50%;
-    /* margin: 3rem auto; */
     height: 20vh;
+    animation: glowing-animation 2s infinite;
+    border: 2px solid #ff0000;
   };
-
 }
 
-
-/* .section {
-  text-align: center;
-  margin-bottom: 2rem;
-} */
-
+@keyframes glowing-animation {
+  0% {
+    box-shadow: 0 0 6px #ff0000;
+  }
+  50% {
+    box-shadow: 0 0 25px #ff0000;
+  }
+  100% {
+    box-shadow: 0 0 6px #ff0000;
+  }
+}
 
 .workbtn {
+  display: block;
   background-color: white;
   border-color: rgb(203, 203, 203);
   border-style: solid;
@@ -73,32 +87,19 @@ strong a {
   width: 60%;
   margin-top: 10px;
   padding: 16px;
-  color: red;
   font-size: 18px;
-
-  a{
-    text-decoration: none;
-    color: red;
-  }
+  color:red;
 }
 
 .workbtn:hover {
   background-color: red;
-  border-color: rgb(203, 203, 203);
-  border-style: solid;
   border-radius: 5px;
   width: 60%;
   margin-top: 10px;
   padding: 16px;
   color: white;
   font-size: 18px;
-
-  a{
-    text-decoration: none;
-    color: red;
-  }
 }
-
 
 .footer {
   margin-top: 4vh;
@@ -110,4 +111,32 @@ i {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+
+@media (max-width: 768px) {
+  /* CSS styles for mobile devices */
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .text{
+    width:84%;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 12px;
+
+  }
+
+  .container {
+    width: 85vw;
+  }
 }
